@@ -1,0 +1,141 @@
+body {
+    background: linear-gradient(80deg, #2f7cc8, #2d293d);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.todo-container {    
+    background: linear-gradient(80deg, #232843, #584994);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 320px;    
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container{
+    display: flex;
+}
+#task-input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+#add-task-btn {
+    margin-left: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #2b527b;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: color 1s;
+}
+#add-task-btn:hover{
+    background: linear-gradient(80deg, #2f7cc8, #2d293d);
+    color: #c1bfbf;
+    font-family: 'inter';
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a2a;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.task-item.completed {
+    background-color: #444;
+    text-decoration: line-through;
+}
+
+.task-item .complete-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-item.completed .complete-btn {
+    background-color: #4caf50;
+}
+
+.task-item .delete-btn {
+    background-color: #ff4c4c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.todo-msg{
+    margin-left: 200px;
+    margin-top: 20px;
+    text-align: center;
+}
+.todo-msg h3{
+    font-family: 'lato';
+    font-size: 25px;
+    color: #89d6d7;
+}
+
+.todo-msg h1{
+    font-size: 60px;
+    font-family: 'langar';
+    margin-top: -25px;
+}
+
+/* Animation for writing  */
+.typing {
+    border-right: 2px solid #000; 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
